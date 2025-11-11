@@ -1,0 +1,185 @@
+{
+	"info": {
+		"_postman_id": "47183256-c3cb830c-ba87-4388-908f-fdccdff3edf1",
+		"name": "Delivery Document",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Delivery Get",
+			"id": "47183256-2ddf7cef-67bc-4996-819b-0233fcc17e95",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "fupi8xlLsuRZRmYwBKtUqaorELcnYa<EvKncVidV",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "CPI_COM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-CSRF-TOKEN",
+						"value": "FETCH",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://my419475-api.s4hana.cloud.sap/sap/opu/odata/sap/API_OUTBOUND_DELIVERY_SRV;v=0002/A_OutbDeliveryHeader('80000123')",
+					"protocol": "https",
+					"host": [
+						"my419475-api",
+						"s4hana",
+						"cloud",
+						"sap"
+					],
+					"path": [
+						"sap",
+						"opu",
+						"odata",
+						"sap",
+						"API_OUTBOUND_DELIVERY_SRV;v=0002",
+						"A_OutbDeliveryHeader('80000123')"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delivery Document Create",
+			"id": "47183256-3ac0f7db-071e-4e60-94d8-305ec1acec80",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "fupi8xlLsuRZRmYwBKtUqaorELcnYa<EvKncVidV",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "CPI_COM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-csrf-token",
+						"value": "9PcIAWRSPMW79teQZ4v_IA==",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"ActualGoodsMovementDate\": \"2025-11-06T00:00:00\",\r\n//    \"BillOfLading\": \"string\",\r\n//    \"DeliveryBlockReason\": \"string\",\r\n   \"DeliveryDate\": \"2025-11-06T00:00:00\",\r\n   \"DeliveryDocumentBySupplier\": \"string\",\r\n   \"DeliveryPriority\": \"02\",\r\n   \"DeliveryTime\": \"PT15H51M04S\",\r\n   \"GoodsIssueTime\": \"PT15H51M04S\",\r\n   \"HeaderGrossWeight\": \"200\",\r\n   \"HeaderNetWeight\": \"180\",\r\n//    \"HeaderVolume\": \"\",\r\n//    \"HeaderVolumeUnit\": \"string\",\r\n   \"HeaderWeightUnit\": \"G\",\r\n   \"IncotermsClassification\": \"FOB\",\r\n   \"IncotermsTransferLocation\": \"FOB\",\r\n   \"LoadingDate\": \"2025-11-06T00:00:00\",\r\n   \"LoadingTime\": \"PT15H51M04S\",\r\n   \"MeansOfTransport\": \"Road\",\r\n   \"MeansOfTransportType\": \"Road\",\r\n   \"PickingDate\": \"2025-11-06T00:00:00\",\r\n   \"PickingTime\": \"PT15H51M04S\",\r\n   \"PlannedGoodsIssueDate\": \"2025-11-06T00:00:00\",\r\n//    \"ProposedDeliveryRoute\": \"string\",\r\n   \"ShippingPoint\": \"1100\",\r\n   \"TransportationPlanningDate\": \"2025-11-06T00:00:00\",\r\n   \"TransportationPlanningTime\": \"PT15H51M04S\",\r\n//    \"UnloadingPointName\": \"string\",\r\n   \"to_DeliveryDocumentItem\": {\r\n      \"results\": [\r\n         {\r\n            \"ActualDeliveredQtyInBaseUnit\": \"5\",\r\n            \"ActualDeliveryQuantity\": \"5\",\r\n            // \"Batch\": \"string\",\r\n            // \"DeliveryDocument\": \"string\",\r\n            \"DeliveryDocumentItemText\": \"Testingdelivery\",\r\n            \"DeliveryQuantityUnit\": \"PC\",\r\n            // \"EUDeliveryItemARCStatus\": \"string\",\r\n            // \"InventoryValuationType\": \"string\",\r\n            \"ItemGrossWeight\": \"200\",\r\n            \"ItemNetWeight\": \"180\",\r\n            // \"ItemVolume\": \"0\",\r\n            // \"ItemVolumeUnit\": \"string\",\r\n            \"ItemWeightUnit\": \"G\",\r\n            \"ManufactureDate\": \"2025-11-06T00:00:00\",\r\n            // \"MaterialByCustomer\": \"string\",\r\n            \"ReferenceSDDocument\": \"2101000128\",\r\n            \"ReferenceSDDocumentItem\": \"10\",\r\n            // \"ShelfLifeExpirationDate\": \"/Date(1492098664000)/\",\r\n            \"StorageLocation\": \"1153\"\r\n         }\r\n      ]\r\n   }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://my419475-api.s4hana.cloud.sap/sap/opu/odata/sap/API_OUTBOUND_DELIVERY_SRV;v=0002/A_OutbDeliveryHeader",
+					"protocol": "https",
+					"host": [
+						"my419475-api",
+						"s4hana",
+						"cloud",
+						"sap"
+					],
+					"path": [
+						"sap",
+						"opu",
+						"odata",
+						"sap",
+						"API_OUTBOUND_DELIVERY_SRV;v=0002",
+						"A_OutbDeliveryHeader"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delivery Update",
+			"id": "47183256-acc251bf-7d49-4742-965b-ebc78674c95f",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "fupi8xlLsuRZRmYwBKtUqaorELcnYa<EvKncVidV",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "CPI_COM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "x-csrf-token",
+						"value": "9PcIAWRSPMW79teQZ4v_IA==",
+						"type": "text"
+					},
+					{
+						"key": "If-Match",
+						"value": "W/\"'0002'\"",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"d\": {\r\n    //   \"ActualGoodsMovementDate\": \"/Date(1492098664000)/\",\r\n    //   \"BillOfLading\": \"string\",\r\n    //   \"DeliveryBlockReason\": \"string\",\r\n    //   \"DeliveryDate\": \"/Date(1492098664000)/\",\r\n      \"DeliveryDocumentBySupplier\": \"Supplier\",\r\n    //   \"DeliveryPriority\": \"string\",\r\n    //   \"DeliveryTime\": \"PT15H51M04S\",\r\n    //   \"GoodsIssueTime\": \"PT15H51M04S\",\r\n    //   \"HeaderGrossWeight\": \"0\",\r\n    //   \"HeaderNetWeight\": \"0\",\r\n    //   \"HeaderVolume\": \"0\",\r\n    //   \"HeaderVolumeUnit\": \"string\",\r\n    //   \"HeaderWeightUnit\": \"string\",\r\n    //   \"IncotermsClassification\": \"string\",\r\n    //   \"IncotermsTransferLocation\": \"string\",\r\n    //   \"LoadingDate\": \"/Date(1492098664000)/\",\r\n    //   \"LoadingTime\": \"PT15H51M04S\",\r\n    //   \"MeansOfTransport\": \"ROAD\",\r\n    //   \"MeansOfTransportType\": \"ROAD\",\r\n    //   \"PickingDate\": \"/Date(1492098664000)/\",\r\n    //   \"PickingTime\": \"PT15H51M04S\",\r\n    //   \"PlannedGoodsIssueDate\": \"/Date(1492098664000)/\",\r\n    //   \"ProposedDeliveryRoute\": \"string\",\r\n    //   \"TransportationPlanningDate\": \"/Date(1492098664000)/\",\r\n    //   \"TransportationPlanningTime\": \"PT15H51M04S\",\r\n      \"UnloadingPointName\": \"Unloading\"\r\n   }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://my419475-api.s4hana.cloud.sap/sap/opu/odata/sap/API_OUTBOUND_DELIVERY_SRV;v=0002/A_OutbDeliveryHeader('4101000064')",
+					"protocol": "https",
+					"host": [
+						"my419475-api",
+						"s4hana",
+						"cloud",
+						"sap"
+					],
+					"path": [
+						"sap",
+						"opu",
+						"odata",
+						"sap",
+						"API_OUTBOUND_DELIVERY_SRV;v=0002",
+						"A_OutbDeliveryHeader('4101000064')"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
